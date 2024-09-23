@@ -19,6 +19,7 @@ namespace Task1
             Console.WriteLine("То как зверь она завоет");
             Console.WriteLine("То заплачет как дитя");
 
+            Console.ResetColor();
             Console.ReadKey();
         }
     }
