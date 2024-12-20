@@ -14,7 +14,7 @@ namespace task._03
                 var whiteBishopPosition = Console.ReadLine();
 
                 Console.WriteLine("Введите позицию черного ферзя (например, d8):");
-                var blackQueenPosition = Console.ReadLine();
+            var blackQueenPosition = Console.ReadLine();
 
                 if (IsWhiteBishopUnderAttack(whiteBishopPosition, blackQueenPosition))
                 {
