@@ -20,9 +20,9 @@ namespace UniversityLibrary.UnitTests
             var fullstudent = GetTestFullStudent();
             var lines = new[]
             {
-                "Никита Смирнов УГИ-235109",
-                "Номер зачётной книжки: 2023006 Институт: Гуманитарный Направление обучения: Бакалавр",
-                "Студент очного обучения с баллом ЕГЭ: 252"
+                "РќРёРєРёС‚Р° РЎРјРёСЂРЅРѕРІ РЈР“Р-235109",
+                "РќРѕРјРµСЂ Р·Р°С‡С‘С‚РЅРѕР№ РєРЅРёР¶РєРё: 2023006 РРЅСЃС‚РёС‚СѓС‚: Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№ РќР°РїСЂР°РІР»РµРЅРёРµ РѕР±СѓС‡РµРЅРёСЏ: Р‘Р°РєР°Р»Р°РІСЂ",
+                "РЎС‚СѓРґРµРЅС‚ РѕС‡РЅРѕРіРѕ РѕР±СѓС‡РµРЅРёСЏ СЃ Р±Р°Р»Р»РѕРј Р•Р“Р­: 252"
             };
 
             var info = fullstudent.GetInfo();
@@ -35,9 +35,9 @@ namespace UniversityLibrary.UnitTests
 
         private FullTimeStudent GetTestFullStudent()
         {
-            var full = new FullTimeStudent("Никита", "Смирнов", 2023006, "УГИ-235109", "Гуманитарный", StudentsMajor.Bachelor, 252);
-            full.NumberClass = "УГИ-235109";
-            full.Institute = "Гуманитарный";
+            var full = new FullTimeStudent("РќРёРєРёС‚Р°", "РЎРјРёСЂРЅРѕРІ", 2023006, "РЈР“Р-235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, 252);
+            full.NumberClass = "РЈР“Р-235109";
+            full.Institute = "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№";
             full.ExamScore = 252;
             return full;
         }
