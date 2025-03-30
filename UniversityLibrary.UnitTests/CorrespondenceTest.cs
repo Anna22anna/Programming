@@ -11,8 +11,8 @@ namespace UniversityLibrary.UnitTests
         {
             var corstudent = GetTestCorStudent();
 
-            Assert.That(corstudent.Job, Is.EqualTo("Кафе Рандеву"));
-            Assert.That(corstudent.Position, Is.EqualTo("Официант"));
+            Assert.That(corstudent.Job, Is.EqualTo("РљР°С„Рµ Р Р°РЅРґРµРІСѓ"));
+            Assert.That(corstudent.Position, Is.EqualTo("РћС„РёС†РёР°РЅС‚"));
         }
 
         [Test]
@@ -21,9 +21,9 @@ namespace UniversityLibrary.UnitTests
             var corstudent = GetTestCorStudent();
             var lines = new[]
             {
-                "Никита Смирнов УГИ-235109",
-                "Номер зачётной книжки: 2023006 Институт: Гуманитарный Направление обучения: Бакалавр",
-                "Студент заочного обучения - Место работы: Кафе Рандеву; Должность: Официант"
+                "РќРёРєРёС‚Р° РЎРјРёСЂРЅРѕРІ РЈР“Р-235109",
+                "РќРѕРјРµСЂ Р·Р°С‡С‘С‚РЅРѕР№ РєРЅРёР¶РєРё: 2023006 РРЅСЃС‚РёС‚СѓС‚: Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№ РќР°РїСЂРІР»РµРЅРёРµ РѕР±СѓС‡РµРЅРёСЏ: Р‘Р°РєР°Р»Р°РІСЂ",
+                "РЎС‚СѓРґРµРЅС‚ Р·Р°РѕС‡РЅРѕРіРѕ РѕР±СѓС‡РµРЅРёСЏ - РњРµСЃС‚Рѕ СЂР°Р±РѕС‚С‹: РљР°С„Рµ Р Р°РЅРґРµРІСѓ; Р”РѕР»Р¶РЅРѕСЃС‚СЊ: РћС„РёС†РёР°РЅС‚"
             };
 
             var info = corstudent.GetInfo();
@@ -36,9 +36,9 @@ namespace UniversityLibrary.UnitTests
 
         private Correspondence GetTestCorStudent()
         {
-            var full = new Correspondence("Никита", "Смирнов", 2023006, "УГИ-235109", "Гуманитарный", StudentsMajor.Bachelor, "Кафе Рандеву", "Официант");
-            full.NumberClass = "УГИ-235109";
-            full.Institute = "Гуманитарный";
+            var full = new Correspondence("РќРёРєРёС‚Р°", "РЎРјРёСЂРЅРѕРІ", 2023006, "РЈР“Р-235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, "РљР°С„Рµ Р Р°РЅРґРµРІСѓ", "РћС„РёС†РёР°РЅС‚");
+            full.NumberClass = "РЈР“Р-235109";
+            full.Institute = "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№";
             return full;
         }
     }
