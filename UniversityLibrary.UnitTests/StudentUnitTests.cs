@@ -11,7 +11,7 @@ namespace UniversityLibrary.UnitTests
             var mark = CreateTestPerson();
             Assert.That(mark.Name, Is.EqualTo("Никита"));
             Assert.That(mark.Surname, Is.EqualTo("Смирнов"));
-            Assert.That(mark.NumberExamList, Is.EqualTo("2023006"));
+            Assert.That(mark.NumberExamList, Is.EqualTo(2023006));
             Assert.That(mark.NumberClass, Is.EqualTo("УГИ-235109"));
             Assert.That(mark.Institute, Is.EqualTo("Гуманитарный"));
             Assert.That(mark.Major, Is.EqualTo(StudentsMajor.Bachelor));
@@ -29,7 +29,11 @@ namespace UniversityLibrary.UnitTests
         }
         private Student CreateTestPerson()
         {
-            return new Student("Никита", "Смирнов", "2023006", "УГИ-235109", "Гуманитарный", StudentsMajor.Bachelor);
+            return new Student("Никита", "Смирнов", 2023006)
+            {
+                NumberClass = "УГИ-235109",
+                Institute = "Гуманитарный",
+            };
         }
     }
 }
