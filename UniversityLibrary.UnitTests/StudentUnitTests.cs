@@ -9,11 +9,11 @@ namespace UniversityLibrary.UnitTests
         public void ConstructorTest()
         {
             var mark = CreateTestPerson();
-            Assert.That(mark.Name, Is.EqualTo("Никита"));
-            Assert.That(mark.Surname, Is.EqualTo("Смирнов"));
+            Assert.That(mark.Name, Is.EqualTo("РќРёРєРёС‚Р°"));
+            Assert.That(mark.Surname, Is.EqualTo("РЎРјРёСЂРЅРѕРІ"));
             Assert.That(mark.NumberExamList, Is.EqualTo(2023006));
-            Assert.That(mark.NumberClass, Is.EqualTo("УГИ-235109"));
-            Assert.That(mark.Institute, Is.EqualTo("Гуманитарный"));
+            Assert.That(mark.NumberClass, Is.EqualTo("РЈР“Р-235109"));
+            Assert.That(mark.Institute, Is.EqualTo("Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№"));
             Assert.That(mark.Major, Is.EqualTo(StudentsMajor.Bachelor));
         }
 
@@ -24,15 +24,15 @@ namespace UniversityLibrary.UnitTests
             var info = mark.GetInfo();
 
             Assert.That(info.Length, Is.EqualTo(3));
-            Assert.That(info[0], Is.EqualTo("Никита Смирнов УГИ-235109"));
-            Assert.That(info[1], Is.EqualTo($"Номер зачётной книжки: 2023006 Институт: Гуманитарный Направление обучения: Бакалавр"));
+            Assert.That(info[0], Is.EqualTo("РќРёРєРёС‚Р° РЎРјРёСЂРЅРѕРІ РЈР“Р-235109"));
+            Assert.That(info[1], Is.EqualTo($"РќРѕРјРµСЂ Р·Р°С‡С‘С‚РЅРѕР№ РєРЅРёР¶РєРё: 2023006 РРЅСЃС‚РёС‚СѓС‚: Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№ РќР°РїСЂР°РІР»РµРЅРёРµ РѕР±СѓС‡РµРЅРёСЏ: Р‘Р°РєР°Р»Р°РІСЂ"));
         }
         private Student CreateTestPerson()
         {
-            return new Student("Никита", "Смирнов", 2023006)
+            return new Student("РќРёРєРёС‚Р°", "РЎРјРёСЂРЅРѕРІ", 2023006)
             {
-                NumberClass = "УГИ-235109",
-                Institute = "Гуманитарный",
+                NumberClass = "РЈР“Р-235109",
+                Institute = "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№",
             };
         }
     }
