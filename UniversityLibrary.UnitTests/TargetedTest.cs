@@ -11,7 +11,7 @@ namespace UniversityLibrary.UnitTests
         {
             var targstudent = GetTestTargStudent();
 
-            Assert.That(targstudent.Company, Is.EqualTo("СКБ Контур"));
+            Assert.That(targstudent.Company, Is.EqualTo("РЎРљР‘ РљРѕРЅС‚СѓСЂ"));
             Assert.That(targstudent.Summ, Is.EqualTo(250000));
         }
 
@@ -22,9 +22,9 @@ namespace UniversityLibrary.UnitTests
             var targstudent = GetTestTargStudent();
             var lines = new[]
             {
-                "Никита Смирнов УГИ-235109",
-                "Номер зачётной книжки: 2023006 Институт: Гуманитарный Направление обучения: Бакалавр",
-                "Студент целевого обучения - Целевое предприятие: СКБ Контур; Сумма обучения: 250000"
+                "РќРёРєРёС‚Р° РЎРјРёСЂРЅРѕРІ РЈР“Р-235109",
+                "РќРѕРјРµСЂ Р·Р°С‡С‘С‚РЅРѕР№ РєРЅРёР¶РєРё: 2023006 РРЅСЃС‚РёС‚СѓС‚: Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№ РќР°РїСЂР°РІР»РµРЅРёРµ РѕР±СѓС‡РµРЅРёСЏ: Р‘Р°РєР°Р»Р°РІСЂ",
+                "РЎС‚СѓРґРµРЅС‚ С†РµР»РµРІРѕРіРѕ РѕР±СѓС‡РµРЅРёСЏ - Р¦РµР»РµРІРѕРµ РїСЂРµРґРїСЂРёСЏС‚РёРµ: РЎРљР‘ РљРѕРЅС‚СѓСЂ; РЎСѓРјРјР° РѕР±СѓС‡РµРЅРёСЏ: 250000"
             };
 
             var info = targstudent.GetInfo();
@@ -37,10 +37,10 @@ namespace UniversityLibrary.UnitTests
 
         private TargetedStudent GetTestTargStudent()
         {
-            var full = new TargetedStudent("Никита", "Смирнов", 2023006, "УГИ-235109", "Гуманитарный", StudentsMajor.Bachelor, "СКБ Контур", 250000);
-            full.NumberClass = "УГИ-235109";
-            full.Institute = "Гуманитарный";
-            return full;
+            var targ = new TargetedStudent("РќРёРєРёС‚Р°", "РЎРјРёСЂРЅРѕРІ", 2023006, "РЈР“Р-235109", "Р“СѓРјР°РёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, "РЎРљР‘ РљРѕРЅС‚СѓСЂ", 250000);
+            targ.NumberClass = "РЈР“Р-235109";
+            targ.Institute = "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№";
+            return targ;
         }
     }
 }
