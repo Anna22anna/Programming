@@ -12,6 +12,8 @@ namespace Controlls
 {
     public partial class ControllsForm : Form
     {
+        int pictureNumber = 1;
+        ResourceManager rn = new 
         public ControllsForm()
         {
             InitializeComponent();
@@ -24,6 +26,12 @@ namespace Controlls
             comboBox1.Items.Add("Microsoft Sans Serif");
             comboBox1.Items.Add("New Times Roman");
             comboBox1.Items.Add("Candara");
+
+            
+
+            pictureBox1.ImageLocation = "prr1.jpg";
+            pictureBox1.Load();
+        
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -68,6 +76,36 @@ namespace Controlls
         private void CaptionListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             Title.Text = CaptionListBox.SelectedIndex.ToString();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChangePicture(object sender, EventArgs e)
+        {
+            if(sender is Button button)
+            {
+                if (button.Text == "<")
+                {
+                    pictureNumber--;
+                }
+                else 
+                    pictureNumber++;
+
+                if (pictureNumber == 0)
+                    pictureNumber = 7;
+                else if (pictureNumber == 8)
+                    pictureNumber = 1;
+
+                pictureBox1.Image = rn.GetObject
+            }
         }
     }
 }

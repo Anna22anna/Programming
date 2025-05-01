@@ -41,6 +41,10 @@
             this.Size16radio = new System.Windows.Forms.RadioButton();
             this.CaptionListBox = new System.Windows.Forms.ListBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.LeftButton = new System.Windows.Forms.Button();
+            this.RightButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Title
@@ -86,9 +90,9 @@
             // firstRichBox
             // 
             this.firstRichBox.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.firstRichBox.Location = new System.Drawing.Point(429, 20);
+            this.firstRichBox.Location = new System.Drawing.Point(25, 563);
             this.firstRichBox.Name = "firstRichBox";
-            this.firstRichBox.Size = new System.Drawing.Size(359, 405);
+            this.firstRichBox.Size = new System.Drawing.Size(305, 155);
             this.firstRichBox.TabIndex = 4;
             this.firstRichBox.Text = "";
             // 
@@ -185,11 +189,44 @@
             this.comboBox1.Size = new System.Drawing.Size(141, 28);
             this.comboBox1.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(508, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(621, 396);
+            this.pictureBox1.TabIndex = 13;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // LeftButton
+            // 
+            this.LeftButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.LeftButton.Location = new System.Drawing.Point(681, 476);
+            this.LeftButton.Name = "LeftButton";
+            this.LeftButton.Size = new System.Drawing.Size(121, 52);
+            this.LeftButton.TabIndex = 14;
+            this.LeftButton.Text = "<";
+            this.LeftButton.UseVisualStyleBackColor = true;
+            this.LeftButton.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // RightButton
+            // 
+            this.RightButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RightButton.Location = new System.Drawing.Point(808, 476);
+            this.RightButton.Name = "RightButton";
+            this.RightButton.Size = new System.Drawing.Size(110, 52);
+            this.RightButton.TabIndex = 15;
+            this.RightButton.Text = ">";
+            this.RightButton.UseVisualStyleBackColor = true;
+            // 
             // ControllsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 540);
+            this.ClientSize = new System.Drawing.Size(1196, 823);
+            this.Controls.Add(this.RightButton);
+            this.Controls.Add(this.LeftButton);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.CaptionListBox);
             this.Controls.Add(this.Size16radio);
@@ -205,6 +242,7 @@
             this.Controls.Add(this.Title);
             this.Name = "ControllsForm";
             this.Text = "Элементы управления";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -225,6 +263,9 @@
         private System.Windows.Forms.RadioButton Size16radio;
         private System.Windows.Forms.ListBox CaptionListBox;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button LeftButton;
+        private System.Windows.Forms.Button RightButton;
     }
 }
 
