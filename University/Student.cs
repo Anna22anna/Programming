@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace University
 {
-    public class Student
+    public class Student : IComparable<Student>
     {
         public string Name { get; set; }
         public string Surname { get; set; }
@@ -20,6 +20,16 @@ namespace University
             Name = name;
             Surname = surname;
             NumberExamList = numberExamList;
+        }
+
+        public int CompareTo(Student other)
+        {
+            if (Surname != other.Surname)
+                return Surname.CompareTo(other.Surname);
+            else if (Name != other.Name)
+                return Name.CompareTo(other.Name);
+            else
+                return Surname.CompareTo(other.Surname);
         }
 
         public virtual string[] GetInfo()
