@@ -12,21 +12,21 @@ namespace UniversityLibrary.UnitTests
         [SetUp]
         public void SetUp()
         {
-            var masha = new FullTimeStudent("Ìàøà", "Êîìàðîâà", 2023001, "ÓÃÈ - 235109", "Ãóìàíèòàðíûé", StudentsMajor.Bachelor, 250);
-            var kostya = new FullTimeStudent("Êîñòÿ", "Ñòåïàíåíêî", 2023002, "ÓÃÈ - 235109", "Ãóìàíèòàðíûé", StudentsMajor.Bachelor, 244);
-            var nikita = new FullTimeStudent("Íèêèòà", "Ñìèðíîâ", 2023006, "ÓÃÈ - 235109", "Ãóìàíèòàðíûé", StudentsMajor.Bachelor, 252);
-            var misha = new FullTimeStudent("Ìèøà", "Õâîñòîâàëîâ", 2023004, "ÓÃÈ - 235109", "Ãóìàíèòàðíûé", StudentsMajor.Bachelor, 260);
-            var lena = new FullTimeStudent("Ëåíà", "Õâîñòîâàëîâà", 2023003, "ÓÃÈ - 235109", "Ãóìàíèòàðíûé", StudentsMajor.Bachelor, 240);
+            var masha = new FullTimeStudent("ÐœÐ°ÑˆÐ°", "ÐšÐ¾Ð¼Ð°Ñ€Ð¾Ð²Ð°", 2023001, "Ð£Ð“Ð˜ - 235109", "Ð“ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ñ‹Ð¹", StudentsMajor.Bachelor, 250);
+            var kostya = new FullTimeStudent("ÐšÐ¾ÑÑ‚Ñ", "Ð¡Ñ‚ÐµÐ¿Ð°Ð½ÐµÐ½ÐºÐ¾", 2023002, "Ð£Ð“Ð˜ - 235109", "Ð“ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ñ‹Ð¹", StudentsMajor.Bachelor, 244);
+            var nikita = new FullTimeStudent("ÐÐ¸ÐºÐ¸Ñ‚Ð°", "Ð¡Ð¼Ð¸Ñ€Ð½Ð¾Ð²", 2023006, "Ð£Ð“Ð˜ - 235109", "Ð“ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ñ‹Ð¹", StudentsMajor.Bachelor, 252);
+            var misha = new FullTimeStudent("ÐœÐ¸ÑˆÐ°", "Ð¥Ð²Ð¾ÑÑ‚Ð¾Ð²Ð°Ð»Ð¾Ð²", 2023004, "Ð£Ð“Ð˜ - 235109", "Ð“ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ñ‹Ð¹", StudentsMajor.Bachelor, 260);
+            var lena = new FullTimeStudent("Ð›ÐµÐ½Ð°", "Ð¥Ð²Ð¾ÑÑ‚Ð¾Ð²Ð°Ð»Ð¾Ð²Ð°", 2023003, "Ð£Ð“Ð˜ - 235109", "Ð“ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ñ‹Ð¹", StudentsMajor.Bachelor, 240);
 
             students = new FullTimeStudent[] { masha, kostya, nikita, misha, lena };
 
-            group = new AcademicGroup("Èíòåëëåêòóàëüíûå ñèñòåìû â ãóìàíèòàðíîé ñôåðå", students);
+            group = new AcademicGroup("Ð˜Ð½Ñ‚ÐµÐ»Ð»ÐµÐºÑ‚ÑƒÐ°Ð»ÑŒÐ½Ñ‹Ðµ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹ Ð² Ð³ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ð¾Ð¹ ÑÑ„ÐµÑ€Ðµ", students);
         }
 
         [Test]
         public void ConstructorTest()
         {
-            Assert.That(group.Title, Is.EqualTo("Èíòåëëåêòóàëüíûå ñèñòåìû â ãóìàíèòàðíîé ñôåðå"));
+            Assert.That(group.Title, Is.EqualTo("Ð˜Ð½Ñ‚ÐµÐ»Ð»ÐµÐºÑ‚ÑƒÐ°Ð»ÑŒÐ½Ñ‹Ðµ ÑÐ¸ÑÑ‚ÐµÐ¼Ñ‹ Ð² Ð³ÑƒÐ¼Ð°Ð½Ð¸Ñ‚Ð°Ñ€Ð½Ð¾Ð¹ ÑÑ„ÐµÑ€Ðµ"));
 
             foreach (var student in students)
                 Assert.That(group.Count(s => s.Equals(student)), Is.EqualTo(1));
