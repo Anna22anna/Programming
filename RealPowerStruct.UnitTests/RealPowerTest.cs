@@ -77,7 +77,7 @@ namespace Task16
             var rp1 = new RealPower(2.0, 3.0);
             var rp2 = new RealPower(3.0, 4.0);
 
-            Assert.That(() => rp1 * rp2, Throws.InvalidOperationException.With.Message.EqualTo("Основания степени должны быть одинаковыми"));
+            Assert.That(() => rp1 * rp2, Throws.InvalidOperationException.With.Message.EqualTo("РћСЃРЅРѕРІР°РЅРёСЏ СЃС‚РµРїРµРЅРё РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹РјРё"));
         }
 
         [Test]
@@ -97,7 +97,7 @@ namespace Task16
             var rp1 = new RealPower(2.0, 4.0);
             var rp2 = new RealPower(3.0, 3.0);
 
-            Assert.That(() => rp1 / rp2, Throws.InvalidOperationException.With.Message.EqualTo("Основания степени должны быть одинаковыми"));
+            Assert.That(() => rp1 / rp2, Throws.InvalidOperationException.With.Message.EqualTo("РћСЃРЅРѕРІР°РЅРёСЏ СЃС‚РµРїРµРЅРё РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РѕРґРёРЅР°РєРѕРІС‹РјРёГЁ"));
         }
     }
 }
