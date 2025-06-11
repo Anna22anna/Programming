@@ -37,7 +37,7 @@ namespace UniversityLibrary.UnitTests
 
         private TargetedStudent GetTestTargStudent()
         {
-            var targ = new TargetedStudent("Никита", "Смирнов", 2023006, "УГИ-235109", "Гумаитарный", StudentsMajor.Bachelor, "СКБ Контур", 250000);
+            var targ = new TargetedStudent("Никита", "Смирнов", 2023006, "УГИ-235109", "Гуманитарный", StudentsMajor.Bachelor, "СКБ Контур", 250000);
             targ.NumberClass = "УГИ-235109";
             targ.Institute = "Гуманитарный";
             return targ;
