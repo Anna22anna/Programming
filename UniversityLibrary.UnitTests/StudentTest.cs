@@ -9,11 +9,11 @@ namespace UniversityLibrary.UnitTests
         [Test]
         public void CompareToTest()
         {
-            var masha = new FullTimeStudent("Маша", "Комарова", 2023001, "УГИ - 235109", "Гуманитарный", StudentsMajor.Bachelor, 250);
-            var kostya = new FullTimeStudent("Костя", "Степаненко", 2023002, "УГИ - 235109", "Гуманитарный", StudentsMajor.Bachelor, 244);
-            var nikita = new FullTimeStudent("Никита", "Смирнов", 2023006, "УГИ - 235109", "Гуманитарный", StudentsMajor.Bachelor, 252);
-            var misha = new FullTimeStudent("Миша", "Хвостовалов", 2023004, "УГИ - 235109", "Гуманитарный", StudentsMajor.Bachelor, 260);
-            var lena = new FullTimeStudent("Лена", "Хвостовалова", 2023003, "УГИ - 235109", "Гуманитарный", StudentsMajor.Bachelor, 240);
+            var masha = new FullTimeStudent("РњР°С€Р°", "РљРѕРјР°СЂРѕРІР°", 2023001, "РЈР“Р - 235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, 250);
+            var kostya = new FullTimeStudent("РљРѕСЃС‚СЏ", "РЎС‚РµРїР°РЅРµРЅРєРѕ", 2023002, "РЈР“Р - 235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, 244);
+            var nikita = new FullTimeStudent("РќРёРєРёС‚Р°", "РЎРјРёСЂРЅРѕРІ", 2023006, "РЈР“Р - 235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, 252);
+            var misha = new FullTimeStudent("РњРёС€Р°", "РҐРІРѕСЃС‚РѕРІР°Р»РѕРІ", 2023004, "РЈР“Р - 235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, 260);
+            var lena = new FullTimeStudent("Р›РµРЅР°", "РҐРІРѕСЃС‚РѕРІР°Р»РѕРІР°", 2023003, "РЈР“Р - 235109", "Р“СѓРјР°РЅРёС‚Р°СЂРЅС‹Р№", StudentsMajor.Bachelor, 240);
 
             Assert.That(masha.CompareTo(nikita), Is.LessThan(0));
             Assert.That(kostya.CompareTo(masha), Is.GreaterThan(0));
